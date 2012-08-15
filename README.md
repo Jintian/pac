@@ -6,6 +6,6 @@ This is the proxy settings on my mac.
 
 ## how to work
 1. modify `proxy.pac` with your HTTP, HTTPS proxies.
-2. put `com.dongbeta.autossh.plist` under `~/Library/LaunchAgents/` and run
-    launchctl load -w ~/Library/LaunchAgents/com.dongbeta.autossh.plist
-3. restart your mac
+2. modify `com.dongbeta.autossh.plist` with your SSH account.
+3. put `com.dongbeta.autossh.plist` under `~/Library/LaunchAgents/` and run `launchctl load -w ~/Library/LaunchAgents/com.dongbeta.autossh.plist`
+4. restart your mac
