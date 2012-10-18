@@ -26,7 +26,9 @@ function FindProxyForURL(url, host) {
         '.facebook.com', '.facebook.net', '.fbcdn.net',
         '.youtube.com', '.ytimg.com',
         '.wordpress.com', '.blogspot.com',
-        '.feedburner.com'
+        '.feedburner.com', 'gongm.in',
+        '.staticflickr.com', 
+        '.vimeo.com', '.dropbox.com'
     ];
 
     for (var key in DIRECT_IP) {
