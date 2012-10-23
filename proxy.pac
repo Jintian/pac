@@ -4,7 +4,7 @@ function FindProxyForURL(url, host) {
     var PROXY = "DIRECT";
 
     var HTTP_CONNECT = "PROXY 127.0.0.1:8087";
-    var HTTPS_CONNECT = "SOCKS 127.0.0.1:7070";
+    var HTTPS_CONNECT = "SOCKS 127.0.0.1:1c070";
 
     var IP = dnsResolve(host);
 
@@ -16,8 +16,9 @@ function FindProxyForURL(url, host) {
 
     var DIRECT_IP = [
         '^127\.0\.0\.1$',
-        '^192\.168\.\d+\.\d+$',
-        '^203\.208\.46\.\d+$'
+        '^192\.168\.\d+\.\\d+$',
+        '^203\.208\.46\.\\d+$',
+        '^74\.125\.128\.\\d+$'
     ];
 
     var PROXY_DOMAINS = [
@@ -25,10 +26,10 @@ function FindProxyForURL(url, host) {
         'twitter.com', '.twitter.com', 't.co', '.t.co',
         '.facebook.com', '.facebook.net', '.fbcdn.net',
         '.youtube.com', '.ytimg.com',
-        '.wordpress.com', '.blogspot.com',
+        '.wordpress.com', '.blogspot.com', '.blogger.com',
         '.feedburner.com', 'gongm.in',
         '.staticflickr.com', 
-        '.vimeo.com', '.dropbox.com'
+        '.vimeo.com', 'dropbox.com'
     ];
 
     for (var key in DIRECT_IP) {
