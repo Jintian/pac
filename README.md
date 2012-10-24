@@ -9,6 +9,7 @@ This is the proxy settings on my mac.
 2. modify `com.dongbeta.autossh.plist` with your SSH account.
 2. modify `com.dongbeta.goagent.plist` with your goagent settings.
 3. put `com.dongbeta.autossh.plist` and `com.dongbeta.goagent.plist` under `~/Library/LaunchAgents/` then run 
+
 ```shell
 launchctl load -w ~/Library/LaunchAgents/com.dongbeta.autossh.plist
 launchctl load -w ~/Library/LaunchAgents/com.dongbeta.goagent.plist
