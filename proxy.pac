@@ -4,7 +4,7 @@ function FindProxyForURL(url, host) {
     var PROXY = "DIRECT";
 
     var HTTP_CONNECT = "PROXY 127.0.0.1:8087";
-    var HTTPS_CONNECT = "SOCKS 127.0.0.1:1c070";
+    var HTTPS_CONNECT = "SOCKS 127.0.0.1:7070";
 
     var IP = dnsResolve(host);
 
@@ -16,9 +16,9 @@ function FindProxyForURL(url, host) {
 
     var DIRECT_IP = [
         '^127\.0\.0\.1$',
-        '^192\.168\.\d+\.\\d+$',
-        '^203\.208\.46\.\\d+$',
-        '^74\.125\.128\.\\d+$'
+        '^192\.168\.\\d+\.\\d+$',
+        '^203\.208\.46\.\\d+$'
+        '^203\.208\.47\.\\d+$'
     ];
 
     var PROXY_DOMAINS = [
@@ -45,5 +45,5 @@ function FindProxyForURL(url, host) {
         }
     }
 
-    return DIRECT;
+    return PROXY;
 }
